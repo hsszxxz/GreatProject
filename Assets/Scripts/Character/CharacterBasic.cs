@@ -14,5 +14,9 @@ namespace Character
         public float CharacterGravity;
         [Tooltip("角色的旋转速度")]
         public float CharacterRotationSpeed;
+        [HideInInspector]
+        public float blood;
+        [HideInInspector]
+        public float characterSP;
     }
 }
