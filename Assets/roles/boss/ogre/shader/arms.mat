@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: arms
+  m_Shader: {fileID: 4800000, guid: 4602d45c183c8bb46a7a4c0e1cb928cc, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Cubemap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmitTex:
+        m_Texture: {fileID: 2800000, guid: dc0dedeae72dc04418b23a589829e8d1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 4307137d20bf4764898f0cb8c01e7224, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormTex:
+        m_Texture: {fileID: 2800000, guid: c1177001641b3ea4c936f9b1b9e654a2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecTex:
+        m_Texture: {fileID: 2800000, guid: 5deff35a103002244b479e5c9a98867e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CubemapMip: 1.84
+    - _EmitInt: 0.47
+    - _EnvDiffInt: 0.58
+    - _EnvSpecInt: 0.09
+    - _FresnelPow: 0.94
+    - _SpecPow: 3.15
+    m_Colors:
+    - _EnvDownCol: {r: 0.44338796, g: 0.9496855, b: 0.42705977, a: 0}
+    - _EnvSideCol: {r: 1, g: 0.68867916, b: 0.68867916, a: 1}
+    - _EnvUpCol: {r: 1, g: 0.8796312, b: 0.2924527, a: 1}
+    - _MainCol: {r: 0.72327036, g: 0.67841345, b: 0.5617854, a: 1}
+  m_BuildTextureStacks: []
