@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: shader_basic_shipcode old school pro_wall
+  m_Shader: {fileID: 4800000, guid: 4602d45c183c8bb46a7a4c0e1cb928cc, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Cubemap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmitTex:
+        m_Texture: {fileID: 2800000, guid: 01a1cc407232bce4bb6bb516acda4ae6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b488751f9a964224dadeb1d38619732c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormTex:
+        m_Texture: {fileID: 2800000, guid: eeb087eb3b9e6694d9ceb1c668f982e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecTex:
+        m_Texture: {fileID: 2800000, guid: aee984dca652bd143bad9c522d0065c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CubemapMip: 0.2
+    - _EmitInt: 0.22
+    - _EnvDiffInt: 0.4
+    - _EnvSpecInt: 0.14
+    - _FresnelPow: 0
+    - _SpecPow: 4.03
+    m_Colors:
+    - _EnvDownCol: {r: 0.48400673, g: 0.24842751, b: 1, a: 0}
+    - _EnvSideCol: {r: 0.6415094, g: 0.13516067, b: 0.42258704, a: 1}
+    - _EnvUpCol: {r: 0.31689963, g: 0.37106913, b: 0.036173344, a: 1}
+    - _MainCol: {r: 0.8459119, g: 0.8818, b: 1, a: 1}
+  m_BuildTextureStacks: []

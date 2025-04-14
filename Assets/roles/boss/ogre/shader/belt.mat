@@ -50,10 +50,14 @@ Material:
     - _EnvDiffInt: 0.58
     - _EnvSpecInt: 0.05
     - _FresnelPow: 1.8
+    - _OutlineWidth: 0.03
     - _SpecPow: 6.06
+    - _SpecularPow: 30
     m_Colors:
     - _EnvDownCol: {r: 0.44338796, g: 0.9496855, b: 0.42705977, a: 0}
     - _EnvSideCol: {r: 1, g: 0.68867916, b: 0.68867916, a: 1}
     - _EnvUpCol: {r: 1, g: 0.8796312, b: 0.2924527, a: 1}
     - _MainCol: {r: 0.7987421, g: 0.74569356, b: 0.550077, a: 1}
+    - _MainColOL: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
