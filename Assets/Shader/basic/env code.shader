@@ -1,4 +1,4 @@
-Shader "sahder/basic/env code"{
+Shader "shader/basic/env code"{
  Properties {
         _EnvUP ("env up", Color) = (1,1,1,1)
         _EnvDown ("env down", Color) = (0,0,0,1)
