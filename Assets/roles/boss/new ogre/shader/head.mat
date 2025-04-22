@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: head
+  m_Shader: {fileID: 4800000, guid: 4778afce354382e46999214dd8cc0e7d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Cubemap:
+        m_Texture: {fileID: 8900000, guid: 84c0bb9172cc3824192ad37365593930, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffWarpTex:
+        m_Texture: {fileID: 2800000, guid: d0bf3c4cf91badb49adcedf4b379c99d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMask:
+        m_Texture: {fileID: 2800000, guid: 1e18f72c1c5aa524a8b36f32ea35af4b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FresWarpTex:
+        m_Texture: {fileID: 2800000, guid: 7aa8387597da90e498fee20d85903b20, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 332c846cf391e3f4cbb5944810b968fc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 2800000, guid: 3890cee1ac22e004dbd2313dcefac415, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatelnessMask:
+        m_Texture: {fileID: 2800000, guid: ffd717cc62cf48f46be6d918cf6e8343, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormTex:
+        m_Texture: {fileID: 2800000, guid: 234dbde9209cde54a8f88d0eb6e6cadc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _EmitInt: 1.26
+    - _EnvDiffInt: 0.36
+    - _EnvSpecInt: 3.32
+    - _RimInt: 1.92
+    - _SpecInt: 1.56
+    - _SpecPow: 2.33
+    m_Colors:
+    - _EnvCol: {r: 0.6176584, g: 0.2816541, b: 0.63522005, a: 1}
+    - _EnvDownCol: {r: 0.4, g: 0.58431375, b: 0.39607844, a: 1}
+    - _EnvSideCol: {r: 0.4509804, g: 0.043137256, b: 0.2627451, a: 1}
+    - _EnvUpCol: {r: 0.6431373, g: 0.46666667, b: 0.18039216, a: 1}
+    - _LightCol: {r: 1, g: 0.91890824, b: 0.71383643, a: 1}
+    - _RimCol: {r: 0.54088044, g: 0.26446038, b: 0, a: 1}
+  m_BuildTextureStacks: []
