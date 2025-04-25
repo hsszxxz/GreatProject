@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: watermonsterEyes
+  m_Shader: {fileID: 4800000, guid: 74768dcbd50b00d47a3783050442fd7b, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamMask:
+        m_Texture: {fileID: 2800000, guid: 297d2d967da3a4c4d9bef583d10cebc1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Foam_Texture:
+        m_Texture: {fileID: 2800000, guid: 729fd1c6753e02647915f7e70c13bfd9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RipplesNormal:
+        m_Texture: {fileID: 2800000, guid: 7f44b2ffa3757f14ea549551839fda20, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RipplesNormal2:
+        m_Texture: {fileID: 2800000, guid: 11a6c2a803c0a504daeed13358363798, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaveMask:
+        m_Texture: {fileID: 2800000, guid: 94e6d31a038d18e40a4bc261f1435b84, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CausticDepthFade: 0.33
+    - _CausticScale: 0.68
+    - _CausticSpeed: 0.96
+    - _Depth: 2.65
+    - _Distortion: 0
+    - _DistortionSpeed: 0
+    - _DistortionTiling: 0
+    - _FoamFalloff: -56
+    - _FoamGlowMultiplier: 1.13
+    - _FoamShoreline: 0
+    - _FoamSmoothness: 0
+    - _FoamSpread: 0.019
+    - _GlowDepth: 2.2
+    - _GlowFalloff: 0.59
+    - _NormalScale: 0.54
+    - _NormalTiling: 0.2
+    - _NormalTiling2: 1.48
+    - _Opacity: 2.4
+    - _OpacityFalloff: 5.6
+    - _OpacityMin: 0.16
+    - _OverallFalloff: 3.82
+    - _ReflectionPower: 0.12
+    - _RippleSpeed: 0.01
+    - _ShallowFalloff: 1.81
+    - _Smoothness: 0.1
+    - _Specular: 0
+    - _WaveAmplitude: 0.12
+    - _WaveDirection: 0.02
+    - _WaveFoamOpacity: 0.1
+    - _WaveNoiseAmount: 4.14
+    - _WaveNoiseScale: 47.4
+    - _WaveSpeed: 0.56
+    - _WaveWavelength: 1.06
+    - __dirty: 1
+    m_Colors:
+    - _CausticColour: {r: 0.8616352, g: 0.15986308, b: 0.15986308, a: 0}
+    - _DeepColour: {r: 1, g: 0.03137255, b: 0, a: 0}
+    - _DepthGlowColour: {r: 0.05502153, g: 0.16352195, b: 0.15267192, a: 0}
+    - _FoamColor: {r: 0.27044016, g: 0.058680374, b: 0.13777858, a: 0}
+    - _FoamEmitColour: {r: 0, g: 0, b: 0, a: 0}
+    - _ShallowColour: {r: 0.9559748, g: 0.149365, b: 0.08116753, a: 0}
+    - _VeryDeepColour: {r: 1, g: 0.014555816, b: 0, a: 0}
+  m_BuildTextureStacks: []

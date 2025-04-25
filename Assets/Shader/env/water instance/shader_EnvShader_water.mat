@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DistortionMap:
-        m_Texture: {fileID: 2800000, guid: e4c83886e423af540b2767e694d93e33, type: 3}
+        m_Texture: {fileID: 2800000, guid: 11a6c2a803c0a504daeed13358363798, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FoamMask:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RipplesNormal2:
-        m_Texture: {fileID: 2800000, guid: a954bf9d99070634181981a97b088b8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 11a6c2a803c0a504daeed13358363798, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WaveMask:
@@ -53,46 +53,46 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CausticDepthFade: 0.44
-    - _CausticScale: 0.43
-    - _CausticSpeed: 4.27
-    - _Depth: 0.28
-    - _Distortion: 0.18
-    - _DistortionSpeed: 0.46
-    - _DistortionTiling: 0.33
+    - _CausticDepthFade: 0.33
+    - _CausticScale: 0.68
+    - _CausticSpeed: 0.96
+    - _Depth: 0
+    - _Distortion: 0
+    - _DistortionSpeed: 0
+    - _DistortionTiling: 0
     - _FoamFalloff: -56
-    - _FoamGlowMultiplier: 1
+    - _FoamGlowMultiplier: 1.13
     - _FoamShoreline: 0
     - _FoamSmoothness: 0
     - _FoamSpread: 0.019
-    - _GlowDepth: 0.1
-    - _GlowFalloff: 0.1
-    - _NormalScale: 0.669
+    - _GlowDepth: 2.2
+    - _GlowFalloff: 0.59
+    - _NormalScale: 0.54
     - _NormalTiling: 0.2
-    - _NormalTiling2: -0.29
-    - _Opacity: 0.822
-    - _OpacityFalloff: 9
+    - _NormalTiling2: 1.48
+    - _Opacity: 0.77
+    - _OpacityFalloff: 5.6
     - _OpacityMin: 0.33
-    - _OverallFalloff: 0.76
-    - _ReflectionPower: 0.346
-    - _RippleSpeed: 0.26
-    - _ShallowFalloff: 0.4
+    - _OverallFalloff: 3.4
+    - _ReflectionPower: 0.64
+    - _RippleSpeed: 0.01
+    - _ShallowFalloff: 1
     - _Smoothness: 2
-    - _Specular: 0.021
-    - _WaveAmplitude: 0.78
-    - _WaveDirection: 0
-    - _WaveFoamOpacity: 0
-    - _WaveNoiseAmount: 3.64
-    - _WaveNoiseScale: 1.09
-    - _WaveSpeed: 0.44
-    - _WaveWavelength: 0.62
+    - _Specular: 0.05
+    - _WaveAmplitude: 0.12
+    - _WaveDirection: 0.02
+    - _WaveFoamOpacity: 0.1
+    - _WaveNoiseAmount: 4.14
+    - _WaveNoiseScale: 47.4
+    - _WaveSpeed: 0.56
+    - _WaveWavelength: 1.06
     - __dirty: 1
     m_Colors:
-    - _CausticColour: {r: 0.496, g: 0.496, b: 0.496, a: 0}
-    - _DeepColour: {r: 0.04705882, g: 0.3098039, b: 0.1960784, a: 0}
-    - _DepthGlowColour: {r: 0, g: 0, b: 0, a: 0}
-    - _FoamColor: {r: 0.5215687, g: 0.8980392, b: 0.8470588, a: 0}
+    - _CausticColour: {r: 0.49056602, g: 0.4242316, b: 0.4242316, a: 0}
+    - _DeepColour: {r: 0.22419986, g: 0.5602043, b: 0.654088, a: 0}
+    - _DepthGlowColour: {r: 0.05502153, g: 0.16352195, b: 0.15267192, a: 0}
+    - _FoamColor: {r: 0.28885314, g: 0.7969788, b: 0.7987421, a: 0}
     - _FoamEmitColour: {r: 0, g: 0, b: 0, a: 0}
-    - _ShallowColour: {r: 0.9607843, g: 0.7882353, b: 0.5764706, a: 0}
-    - _VeryDeepColour: {r: 0.05959199, g: 0.08247829, b: 0.191, a: 0}
+    - _ShallowColour: {r: 0.14625594, g: 0.91194963, b: 0.82222354, a: 0}
+    - _VeryDeepColour: {r: 0.14783823, g: 0.3764939, b: 0.72327036, a: 0}
   m_BuildTextureStacks: []

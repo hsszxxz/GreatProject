@@ -1,10 +1,9 @@
-// Made with Amplify Shader Editor
-// Available at the Unity Asset Store - http://u3d.as/y3X 
+
 Shader "shader/Env/water"
 {
 	Properties
 	{
-		_Opacity("Opacity", Range( 0 , 1)) = 1
+		_Opacity("Opacity", Range( 0 , 5)) = 1
 		_OpacityFalloff("Opacity Falloff", Float) = 1
 		_OpacityMin("Opacity Min", Range( 0 , 1)) = 0.5
 		_Specular("Specular", Range( 0 , 1)) = 0.141
