@@ -2,73 +2,56 @@ Shader "shader/special effects/OutLine"
 {
     Properties
     {
-        _OutlineColor ("Outline Color", Color) = (1,0,0,1)
-        _OutlineWidth ("Outline Width", Range(0, 1)) = 0.1
+        [Header(OutLine)]
+       _OutlineCol("描边颜色", Color) = (0,0,0,1)  
+       _OutlineFactor("描边大小", Range(0,1)) = 0.01
     }
     SubShader
     {
         Tags { "RenderType"="Opaque" }
         // 第一个 Pass 用于渲染描边
-        Pass
-        {
-            Cull Front // 剔除正面，只渲染背面用于描边
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #include "UnityCG.cginc"
-            uniform float _OutlineWidth;
-            uniform float4 _OutlineColor;
-            struct appdata
-            {
-                float4 vertex : POSITION;
-                float3 normal : NORMAL;
-            };
-            struct v2f
-            {
-                float4 pos : SV_POSITION;
-            };
-            v2f vert (appdata v)
-            {
-                v2f o;
-                // 将顶点沿法线方向外拓以创建描边
-                float3 viewNormal = UnityObjectToViewPos(v.vertex) + v.normal * _OutlineWidth;
-                o.pos = UnityViewToClipPos(viewNormal);
-                return o;
+         //描边使用两个Pass，第一个pass沿法线挤出一点，只输出描边的颜色  
+        Pass  
+        {  
+            //剔除正面，只渲染背面，对于大多数模型适用，不过如果需要背面的，就有问题
+            Cull Front
+            
+            CGPROGRAM  
+            //使用vert函数和frag函数  
+            #pragma vertex vert  
+            #pragma fragment frag  
+            #include "UnityCG.cginc"  
+            fixed4 _OutlineCol;  
+            float _OutlineFactor;
+            
+            struct v2f  
+            {  
+                float4 pos : SV_POSITION;  
+            }; 
+            
+            v2f vert(appdata_full v)  
+            {  
+                v2f o;  
+                //在vertex阶段，每个顶点按照法线的方向偏移一部分，不过这种会造成近大远小的透视问题  
+                //v.vertex.xyz += v.normal * _OutlineFactor;  
+                o.pos = UnityObjectToClipPos(v.vertex); 
+                //将法线方向转换到视空间  
+                float3 vnormal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal);  
+                //将视空间法线xy坐标转化到投影空间，只有xy需要，z深度不需要了  
+                float2 offset = TransformViewToProjection(vnormal.xy);  
+                //在最终投影阶段输出进行偏移操作  
+                o.pos.xy += offset * _OutlineFactor;  
+                return o;  
             }
-            fixed4 frag (v2f i) : SV_Target
-            {
-                return _OutlineColor;
-            }
-            ENDCG
+            
+            fixed4 frag(v2f i) : SV_Target  
+            {  
+                //这个Pass直接输出描边颜色  
+                return _OutlineCol;  
+            }  
+            ENDCG  
         }
-        // 第二个 Pass 用于正常渲染物体
-        Pass
-        {
-            Cull Back // 正常渲染物体的正面
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #include "UnityCG.cginc"
-            struct appdata
-            {
-                float4 vertex : POSITION;
-            };
-            struct v2f
-            {
-                float4 pos : SV_POSITION;
-            };
-            v2f vert (appdata v)
-            {
-                v2f o;
-                o.pos = UnityObjectToClipPos(v.vertex);
-                return o;
-            }
-            fixed4 frag (v2f i) : SV_Target
-            {
-                return fixed4(1,1,1,1); // 正常颜色，可根据需要修改
-            }
-            ENDCG
-        }
+
     }
     FallBack "Diffuse"
 }

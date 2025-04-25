@@ -60,6 +60,7 @@ Material:
     - _EmitInt: 1.26
     - _EnvDiffInt: 0.36
     - _EnvSpecInt: 3.32
+    - _OutlineFactor: 0.01
     - _OutlineWidth: 0.013
     - _RimInt: 1.92
     - _SpecInt: 1.56
@@ -70,6 +71,7 @@ Material:
     - _EnvSideCol: {r: 0.4509804, g: 0.043137256, b: 0.2627451, a: 1}
     - _EnvUpCol: {r: 0.6431373, g: 0.46666667, b: 0.18039216, a: 1}
     - _LightCol: {r: 1, g: 0.91890824, b: 0.71383643, a: 1}
+    - _OutlineCol: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0.043137256, g: 0.05490196, b: 0.27058825, a: 1}
     - _RimCol: {r: 0.54088044, g: 0.26446038, b: 0, a: 1}
   m_BuildTextureStacks: []
