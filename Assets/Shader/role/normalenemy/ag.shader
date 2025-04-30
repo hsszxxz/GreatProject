@@ -1,4 +1,4 @@
-Shader "shader/roles/ag" {
+Shader "shader/roles/normalenemy/ag" {
 Properties {
 [Header(texture)]
 _MainTex ("RGB:颜色 A:透贴", 2d) = "white"{}
@@ -79,7 +79,7 @@ CGPROGRAM
 #include "Lighting.cginc"
 #pragma multi_compile_fwdbase_fullshadows
 #pragma target 3.0
-#include "../MyCgInclude/MyCginc.cginc"
+#include "../../MyCgInclude/MyCginc.cginc"
 
 // 输入参数
 uniform sampler2D _MainTex;
@@ -159,7 +159,7 @@ half fresnelSpec = fresnel.b;
 // 光源漫反射
 half halfLambert = ndotl * 0.5 + 0.5;
 half3 var_DiffWarpTex = tex2D(_DiffWarpTex, half2(halfLambert, 0.2));
-half3 dirDiff = roughness *  diffCol * var_DiffWarpTex * _LightCol;
+half3 dirDiff =  roughness * diffCol * var_DiffWarpTex * _LightCol;
 // 光源镜面反射
 half phong = pow(max(0.0, vdotr), 1);
 half spec = phong * max(0.0, ndotl);
@@ -167,11 +167,11 @@ spec = max(spec, fresnelSpec);
 spec = spec * _SpecInt;
 half3 dirSpec = matellic *spec * _LightCol;
 // 环境漫反射
-half3 envDiff =diffCol * _EnvCol * _EnvDiffInt;
+half3 envDiff = diffCol * _EnvCol * _EnvDiffInt;
 //3col env
 float3 envCol = TriColAmbient ( nDirWS,_EnvUpCol , _EnvSideCol , _EnvDownCol);
 // 混合
-half3 finalRGB = roughness *  ao * (dirDiff + dirSpec) * shadow + envDiff  + (envCol*0.15);
+half3 finalRGB =  ao * (dirDiff + dirSpec) * shadow + envDiff  + (envCol*0.15);
 
 
 

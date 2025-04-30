@@ -1,4 +1,4 @@
-Shader "shader/roles/ogre" {
+Shader "shader/roles/boss/ogre" {
 Properties {
 [Header(texture)]
 _MainTex ("RGB:颜色 A:透贴", 2d) = "white"{}
@@ -90,7 +90,7 @@ CGPROGRAM
 #include "Lighting.cginc"
 #pragma multi_compile_fwdbase_fullshadows
 #pragma target 3.0
-#include "../MyCgInclude/MyCginc.cginc"
+#include "../../MyCgInclude/MyCginc.cginc"
 
 // 输入参数
 uniform sampler2D _MainTex;
