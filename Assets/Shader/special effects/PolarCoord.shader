@@ -4,7 +4,7 @@ Shader "shader/special effects/PolarCoord"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Opacity("透明度",range(0.0,1.0)) = 0.5
-        [HDR]_Color("",Color) = (1.0,1.0,1.0,1.0)
+        [HDR]_Color("color",Color) = (1.0,1.0,1.0,1.0)
     }
     SubShader
     {

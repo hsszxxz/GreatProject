@@ -2,56 +2,60 @@ Shader "shader/special effects/OutLine"
 {
     Properties
     {
+        
         [Header(OutLine)]
-       _OutlineCol("描边颜色", Color) = (0,0,0,1)  
-       _OutlineFactor("描边大小", Range(0,1)) = 0.01
+        _OutlineColor ("外描边颜色", Color) = (0,0,0,1)
+        _OutlineWidth ("外描边宽度", Range(0, 1)) = 0.01
     }
     SubShader
     {
         Tags { "RenderType"="Opaque" }
         // 第一个 Pass 用于渲染描边
-         //描边使用两个Pass，第一个pass沿法线挤出一点，只输出描边的颜色  
-        Pass  
-        {  
-            //剔除正面，只渲染背面，对于大多数模型适用，不过如果需要背面的，就有问题
-            Cull Front
+        Pass
+        {
             
-            CGPROGRAM  
-            //使用vert函数和frag函数  
-            #pragma vertex vert  
-            #pragma fragment frag  
-            #include "UnityCG.cginc"  
-            fixed4 _OutlineCol;  
-            float _OutlineFactor;
-            
-            struct v2f  
-            {  
-                float4 pos : SV_POSITION;  
-            }; 
-            
-            v2f vert(appdata_full v)  
-            {  
-                v2f o;  
-                //在vertex阶段，每个顶点按照法线的方向偏移一部分，不过这种会造成近大远小的透视问题  
-                //v.vertex.xyz += v.normal * _OutlineFactor;  
-                o.pos = UnityObjectToClipPos(v.vertex); 
-                //将法线方向转换到视空间  
-                float3 vnormal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal);  
-                //将视空间法线xy坐标转化到投影空间，只有xy需要，z深度不需要了  
-                float2 offset = TransformViewToProjection(vnormal.xy);  
-                //在最终投影阶段输出进行偏移操作  
-                o.pos.xy += offset * _OutlineFactor;  
-                return o;  
+            Name "OutLinePass"
+            Tags {
+                "LightMode"="ForwardBase"
             }
-            
-            fixed4 frag(v2f i) : SV_Target  
-            {  
-                //这个Pass直接输出描边颜色  
-                return _OutlineCol;  
-            }  
-            ENDCG  
-        }
+            Cull Front
 
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+            #pragma multi_compile_fwdbase_fullshadows
+            #pragma multi_compile_fog
+            #pragma target 3.0
+            //输入参数
+            uniform half _OutlineWidth;
+            uniform half4 _OutlineColor;
+
+            //输入结构
+            struct VertexInput {
+                float4 vertex : POSITION;   //将模型顶点信息输入进来
+                float4 normal : NORMAL;    //  获取法线
+                float2 uv0 : TEXCOORD0;           //采样贴图用
+            };
+            //输出结构
+            struct VertexOutput {
+                float4 pos : SV_POSITION;   //由顶点信息换算而来的顶点屏幕位置
+                float2 uv0 : TEXCOORD0;           //采样贴图用
+            };
+            //输入结构>>>顶点shader>>>输出结构
+            VertexOutput vert (VertexInput v) {
+                  VertexOutput o = (VertexOutput)0;             // 新建一个输出结构
+                 v.vertex.xyz += v.normal*_OutlineWidth;        //利用法线挤出顶点，关联参数面板控制挤出大小
+                 o.pos = UnityObjectToClipPos( v.vertex );      // 变换顶点信息 并将其塞给输出结构，顶点位置OS>CS
+                 return o;                                      // 将输出结构 输出
+            }
+            //输出结构>>>像素
+            half4 frag(VertexOutput i) : COLOR {
+            return _OutlineColor ;
+            }
+            ENDCG
+        }
+       
     }
     FallBack "Diffuse"
 }
