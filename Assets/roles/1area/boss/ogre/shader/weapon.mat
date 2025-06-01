@@ -81,6 +81,6 @@ Material:
     - _EnvUpCol: {r: 0.6431373, g: 0.46666667, b: 0.18039216, a: 1}
     - _LightCol: {r: 1, g: 0.7878268, b: 0.37421376, a: 1}
     - _OutlineCol: {r: 0.22012573, g: 0.046835262, b: 0, a: 1}
-    - _OutlineColor: {r: 0.27058825, g: 0.04313725, b: 0.053775802, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimCol: {r: 1, g: 0.6187658, b: 0.33018857, a: 1}
   m_BuildTextureStacks: []
